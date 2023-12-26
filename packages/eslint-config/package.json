@@ -1,17 +1,35 @@
 {
-  "name": "@repo/eslint-config",
-  "version": "0.0.0",
+  "name": "@1uweb/eslint-config",
+  "version": "1.0.0",
   "private": true,
-  "files": [
-    "library.js",
-    "react.js",
-    "storybook.j"
-  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./base.cjs",
+      "require": "./base.cjs",
+      "types": "./base.cjs"
+    },
+    "astro": {
+      "import": "./astro.cjs",
+      "require": "./astro.cjs",
+      "types": "./astro.cjs"
+    },
+    "react": {
+      "import": "./react.cjs",
+      "require": "./react.cjs",
+      "types": "./react.cjs"
+    }
+  },
   "devDependencies": {
-    "@vercel/style-guide": "^5.0.0",
-    "eslint-config-turbo": "^1.10.12",
-    "eslint-plugin-mdx": "^2.2.0",
-    "eslint-plugin-only-warn": "^1.1.0",
-    "eslint-plugin-storybook": "^0.6.13"
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "eslint-plugin-testing-library": "^6.2.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-vitest": "^0.3.17"
   }
 }
